@@ -1,4 +1,14 @@
+# https://adventofcode.com/2024/day/5
+
+import os
+import sys
+
 import networkx as nx
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
+)
+from file.utils import read_file_lines
 
 
 def check_if_correctly_ordered(graph, pages):
@@ -27,32 +37,31 @@ def get_middle_page(pages) -> int:
 
 
 def main():
-    with open("2024/day-05/day-05-input.txt", "r") as f:
-        lines = f.readlines()
-        separator_index = lines.index("\n")
-        rules = lines[:separator_index]
-        updates = lines[separator_index + 1 :]
+    lines = read_file_lines("2024/day-05/day-05-input.txt")
+    separator_index = lines.index("\n")
+    rules = lines[:separator_index]
+    updates = lines[separator_index + 1 :]
 
-        # Created a directed graph for rules
-        G = nx.DiGraph()
-        for rule in rules:
-            rule = rule.strip().split("|")
-            G.add_node(rule[0])
-            G.add_node(rule[1])
-            G.add_edge(rule[0], rule[1])
+    # Created a directed graph for rules
+    G = nx.DiGraph()
+    for rule in rules:
+        rule = rule.strip().split("|")
+        G.add_node(rule[0])
+        G.add_node(rule[1])
+        G.add_edge(rule[0], rule[1])
 
-        middle_sum = 0
-        middle_sum_for_incorrect_updates = 0
-        for update in updates:
-            pages = update.strip().split(",")
-            if check_if_correctly_ordered(G, pages):
-                middle_sum += get_middle_page(pages)
-            else:
-                correct_order = corrected_order(G, pages)
-                middle_sum_for_incorrect_updates += get_middle_page(correct_order)
+    middle_sum = 0
+    middle_sum_for_incorrect_updates = 0
+    for update in updates:
+        pages = update.strip().split(",")
+        if check_if_correctly_ordered(G, pages):
+            middle_sum += get_middle_page(pages)
+        else:
+            correct_order = corrected_order(G, pages)
+            middle_sum_for_incorrect_updates += get_middle_page(correct_order)
 
-        print("Middle sum:", middle_sum)
-        print("Middle sum for incorrect updates:", middle_sum_for_incorrect_updates)
+    print("Middle sum:", middle_sum)
+    print("Middle sum for incorrect updates:", middle_sum_for_incorrect_updates)
 
 
 if __name__ == "__main__":

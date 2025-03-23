@@ -1,8 +1,17 @@
+# https://adventofcode.com/2024/day/3
+
+import os
 import re
+import sys
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
+)
+from file.utils import read_file_lines
 
 
 def extract_multipliers(instruction):
-    return map(int, re.findall(r'\d+', instruction))
+    return map(int, re.findall(r"\d+", instruction))
 
 
 def calculate_result(valid_instructions, condition_enabled=False):
@@ -22,18 +31,20 @@ def calculate_result(valid_instructions, condition_enabled=False):
 
 
 def main():
-    with open('2024/day-03/day-03-input.txt', 'r') as f:
-        lines = f.readlines()
+    lines = read_file_lines("2024/day-03/day-03-input.txt")
 
-        valid_instructions = []
-        for line in lines:
-            # Extract lines with the following format: mul(x, y) | do() | don't()
-            instructions = re.findall(r"mul\(\d+,\d+\)|do\(\)|don't\(\)", line)
-            valid_instructions.extend(instructions)
+    valid_instructions = []
+    for line in lines:
+        # Extract lines with the following format: mul(x, y) | do() | don't()
+        instructions = re.findall(r"mul\(\d+,\d+\)|do\(\)|don't\(\)", line)
+        valid_instructions.extend(instructions)
 
-        print(f'Result: {calculate_result(valid_instructions)}')
-        print(f'Result (with condition enabled): {
-              calculate_result(valid_instructions, condition_enabled=True)}')
+    print(f"Result: {calculate_result(valid_instructions)}")
+    print(
+        f"Result (with condition enabled): {
+            calculate_result(valid_instructions, condition_enabled=True)
+        }"
+    )
 
 
 if __name__ == "__main__":

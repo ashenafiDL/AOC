@@ -1,4 +1,13 @@
+# https://adventofcode.com/2024/day/1
+
+import os
+import sys
 from typing import List
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
+)
+from file.utils import read_file_lines
 
 
 def constructLists(lines):
@@ -13,7 +22,7 @@ def constructLists(lines):
 
 
 def calculateDistance(left, right):
-    return sum(abs(x-y) for x, y in zip(left, right))
+    return sum(abs(x - y) for x, y in zip(left, right))
 
 
 def calculateSimilarityScore(left: List[int], right: List[int]):
@@ -21,16 +30,15 @@ def calculateSimilarityScore(left: List[int], right: List[int]):
 
 
 def main():
-    with open('2024/day-01/day-01-input.txt', 'r') as f:
-        lines = f.readlines()
-        left, right = constructLists(lines)
+    lines = read_file_lines("2024/day-01/day-01-input.txt")
+    left, right = constructLists(lines)
 
-        print(f"Similarity Score: {calculateSimilarityScore(left, right)}")
+    print(f"Similarity Score: {calculateSimilarityScore(left, right)}")
 
-        left.sort()
-        right.sort()
+    left.sort()
+    right.sort()
 
-        print(f"Total Distance: {calculateDistance(left, right)}")
+    print(f"Total Distance: {calculateDistance(left, right)}")
 
 
 if __name__ == "__main__":
