@@ -1,13 +1,7 @@
 # https://adventofcode.com/2024/day/5
 
-import os
-import sys
-
 import networkx as nx
 
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
-)
 from file.utils import read_file_lines
 
 

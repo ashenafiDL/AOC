@@ -1,12 +1,7 @@
 # https://adventofcode.com/2024/day/1
 
-import os
-import sys
 from typing import List
 
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
-)
 from file.utils import read_file_lines
 
 
