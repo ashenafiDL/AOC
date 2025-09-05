@@ -1,4 +1,4 @@
-# https://adventofcode.com/2024/day/9
+# https://adventofcode.com/2024/day/10
 
 import networkx as nx
 
