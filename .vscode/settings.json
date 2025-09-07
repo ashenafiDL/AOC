@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["topo", "trailheads", "trailscore", "trailtails"]
+  "cSpell.words": [
+    "linalg",
+    "numpy",
+    "topo",
+    "trailheads",
+    "trailscore",
+    "trailtails"
+  ]
 }
