@@ -2,7 +2,7 @@
 
 from collections import Counter
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def transform_stone(stone: int):
@@ -30,7 +30,7 @@ def count_stones(initial: list[int], blinks: int) -> int:
 
 
 def main():
-    lines = read_file_lines("2024/day-11/day-11-input.txt")
+    lines = read_file_lines("day-11/day-11-input.txt")
     initial_stones = list(map(int, lines[0].strip().split()))
 
     count_of_stones = count_stones(initial_stones, 25)

@@ -2,7 +2,7 @@
 
 import networkx as nx
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def generate_trails(map):
@@ -67,7 +67,7 @@ def calculate_trail_rating(trail, trailheads, trailtails):
 
 
 def main():
-    lines = read_file_lines("2024/day-10/day-10-input.txt")
+    lines = read_file_lines("day-10/day-10-input.txt")
 
     # Convert into list of numbers
     nums = [[int(ch) for ch in line.strip()] for line in lines]

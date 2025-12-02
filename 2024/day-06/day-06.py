@@ -1,6 +1,6 @@
 # https://adventofcode.com/2024/day/6
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def simulate_guard_path(lines):
@@ -107,7 +107,7 @@ def count_obstacle_positions(lines):
 
 
 def main():
-    lines = read_file_lines("2024/day-06/day-06-input.txt")
+    lines = read_file_lines("day-06/day-06-input.txt")
     res = simulate_guard_path(lines)
     res2 = count_obstacle_positions(lines)
 

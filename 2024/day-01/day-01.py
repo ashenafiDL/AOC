@@ -2,7 +2,7 @@
 
 from typing import List
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def constructLists(lines):
@@ -25,7 +25,7 @@ def calculateSimilarityScore(left: List[int], right: List[int]):
 
 
 def main():
-    lines = read_file_lines("2024/day-01/day-01-input.txt")
+    lines = read_file_lines("day-01/day-01-input.txt")
     left, right = constructLists(lines)
 
     print(f"Similarity Score: {calculateSimilarityScore(left, right)}")

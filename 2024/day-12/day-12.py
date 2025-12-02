@@ -1,7 +1,7 @@
 # https://adventofcode.com/2024/day/12
 
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 DIRECTIONS = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
@@ -79,7 +79,7 @@ def calculate_region_price(region, use_number_of_sides):
 
 
 def main():
-    lines = read_file_lines("2024/day-12/day-12-input.txt")
+    lines = read_file_lines("day-12/day-12-input.txt")
     grid = [line.strip() for line in lines]
 
     regions = find_regions(grid)

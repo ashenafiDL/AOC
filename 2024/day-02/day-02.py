@@ -1,6 +1,6 @@
 # https://adventofcode.com/2024/day/2
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def is_safe(report):
@@ -37,7 +37,7 @@ def count_safe_reports(data, dampener=False):
 
 
 def main():
-    lines = read_file_lines("2024/day-02/day-02-input.txt")
+    lines = read_file_lines("day-02/day-02-input.txt")
 
     safe_count = count_safe_reports(lines)
     safe_count_with_dampener = count_safe_reports(lines, dampener=True)

@@ -2,7 +2,7 @@
 
 from itertools import combinations
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def count_antinodes(lines, has_resonance=False):
@@ -55,7 +55,7 @@ def count_antinodes(lines, has_resonance=False):
 
 
 def main():
-    lines = read_file_lines("2024/day-08/day-08-input.txt")
+    lines = read_file_lines("day-08/day-08-input.txt")
 
     antinodes = count_antinodes(lines)
     antinodes_with_resonance = count_antinodes(lines, has_resonance=True)

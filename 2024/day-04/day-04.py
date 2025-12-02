@@ -1,6 +1,6 @@
 # https://adventofcode.com/2024/day/4
 
-from file.utils import read_file_lines
+from utils.file import read_file_lines
 
 
 def is_in_bounds(grid, x, y):
@@ -32,7 +32,7 @@ def search_x_mas(grid, x, y):
 
 
 def main():
-    lines = read_file_lines("2024/day-04/day-04-input.txt")
+    lines = read_file_lines("day-04/day-04-input.txt")
 
     grid = []
     for line in lines:
