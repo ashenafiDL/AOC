@@ -31,7 +31,7 @@ def get_middle_page(pages) -> int:
 
 
 def main():
-    lines = read_file_lines("day-05/day-05-input.txt")
+    lines = read_file_lines("2024/day-05/day-05-input.txt")
     separator_index = lines.index("\n")
     rules = lines[:separator_index]
     updates = lines[separator_index + 1 :]

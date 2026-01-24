@@ -1,10 +1,12 @@
 {
-  "cSpell.words": [
-    "linalg",
-    "numpy",
-    "topo",
-    "trailheads",
-    "trailscore",
-    "trailtails"
-  ]
+	"cSpell.words": [
+		"antinodes",
+		"ilog",
+		"linalg",
+		"numpy",
+		"topo",
+		"trailheads",
+		"trailscore",
+		"trailtails"
+	]
 }

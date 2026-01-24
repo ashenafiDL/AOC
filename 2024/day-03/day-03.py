@@ -26,7 +26,7 @@ def calculate_result(valid_instructions, condition_enabled=False):
 
 
 def main():
-    lines = read_file_lines("day-03/day-03-input.txt")
+    lines = read_file_lines("2024/day-03/day-03-input.txt")
 
     valid_instructions = []
     for line in lines:

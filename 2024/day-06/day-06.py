@@ -107,7 +107,7 @@ def count_obstacle_positions(lines):
 
 
 def main():
-    lines = read_file_lines("day-06/day-06-input.txt")
+    lines = read_file_lines("2024/day-06/day-06-input.txt")
     res = simulate_guard_path(lines)
     res2 = count_obstacle_positions(lines)
 

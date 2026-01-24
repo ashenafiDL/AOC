@@ -66,7 +66,7 @@ def calculate_number_of_token(machines, use_correction=False):
 
 
 def main():
-    lines = read_file_lines("day-13/day-13-input.txt")
+    lines = read_file_lines("2024/day-13/day-13-input.txt")
 
     # Part 1
     machines = parse_machines(lines)

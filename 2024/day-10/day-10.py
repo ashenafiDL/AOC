@@ -67,7 +67,7 @@ def calculate_trail_rating(trail, trailheads, trailtails):
 
 
 def main():
-    lines = read_file_lines("day-10/day-10-input.txt")
+    lines = read_file_lines("2024/day-10/day-10-input.txt")
 
     # Convert into list of numbers
     nums = [[int(ch) for ch in line.strip()] for line in lines]
@@ -75,10 +75,10 @@ def main():
     trail, trailheads, trailtails = generate_trails(nums)
 
     score = calculate_trail_score(trail, trailheads, trailtails)
-    print(f"*Score* : {score}")
+    print(f"Score: {score}")
 
     rating = calculate_trail_rating(trail, trailheads, trailtails)
-    print(f"*Rating*: {rating}")
+    print(f"Rating: {rating}")
 
 
 if __name__ == "__main__":

@@ -30,7 +30,7 @@ def count_stones(initial: list[int], blinks: int) -> int:
 
 
 def main():
-    lines = read_file_lines("day-11/day-11-input.txt")
+    lines = read_file_lines("2024/day-11/day-11-input.txt")
     initial_stones = list(map(int, lines[0].strip().split()))
 
     count_of_stones = count_stones(initial_stones, 25)

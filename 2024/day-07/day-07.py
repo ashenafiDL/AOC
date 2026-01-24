@@ -35,13 +35,13 @@ def get_total_calibration_result(lines, operators):
 
 
 def main():
-    lines = read_file_lines("day-07/day-07-input.txt")
+    lines = read_file_lines("2024/day-07/day-07-input.txt")
 
-    without_concatination = get_total_calibration_result(lines, ["+", "*"])
-    print(f"Total calibration result: {without_concatination}")
+    without_concatenation = get_total_calibration_result(lines, ["+", "*"])
+    print(f"Total calibration result: {without_concatenation}")
 
-    with_concatination = get_total_calibration_result(lines, ["+", "*", "||"])
-    print(f"Total calibration result with concatination: {with_concatination}")
+    with_concatenation = get_total_calibration_result(lines, ["+", "*", "||"])
+    print(f"Total calibration result with concatenation: {with_concatenation}")
 
 
 if __name__ == "__main__":

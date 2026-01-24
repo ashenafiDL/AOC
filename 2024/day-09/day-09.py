@@ -114,7 +114,7 @@ def part_two(filesystem):
 
 
 def main():
-    lines = read_file_lines("day-09/day-09-input.txt")
+    lines = read_file_lines("2024/day-09/day-09-input.txt")
 
     input = lines[0].strip()  # the input for this puzzle is a single, very long line
 
