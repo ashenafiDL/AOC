@@ -1,11 +1,8 @@
-# https://adventofcode.com/2024/day/13
-
 import re
 from dataclasses import dataclass
 
 from numpy import linalg
 
-from utils.file import read_file_lines
 
 CORRECTION_VALUE = 10_000_000_000_000
 
@@ -65,9 +62,7 @@ def calculate_number_of_token(machines, use_correction=False):
     return total_tokens
 
 
-def main():
-    lines = read_file_lines("2024/day-13/day-13-input.txt")
-
+def main(lines):
     # Part 1
     machines = parse_machines(lines)
     tokens = calculate_number_of_token(machines)
@@ -79,7 +74,3 @@ def main():
 
     tokens_with_correction = calculate_number_of_token(machines, use_correction=True)
     print(f"Number of token to spend (with correction): {tokens_with_correction}")
-
-
-if __name__ == "__main__":
-    main()

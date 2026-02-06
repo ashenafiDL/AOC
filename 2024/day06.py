@@ -1,8 +1,3 @@
-# https://adventofcode.com/2024/day/6
-
-from utils.file import read_file_lines
-
-
 def simulate_guard_path(lines):
     grid = [list(line.strip()) for line in lines]
     rows, cols = len(grid), len(grid[0])
@@ -106,14 +101,9 @@ def count_obstacle_positions(lines):
     return count
 
 
-def main():
-    lines = read_file_lines("2024/day-06/day-06-input.txt")
+def main(lines):
     res = simulate_guard_path(lines)
     res2 = count_obstacle_positions(lines)
 
     print(f"The guard visits {res} distinct positions.")
     print(f"The guard loops with {res2} obstacle positions.")
-
-
-if __name__ == "__main__":
-    main()

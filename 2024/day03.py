@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/3
-
 import re
-
-from utils.file import read_file_lines
 
 
 def extract_multipliers(instruction):
@@ -25,9 +21,7 @@ def calculate_result(valid_instructions, condition_enabled=False):
     return result
 
 
-def main():
-    lines = read_file_lines("2024/day-03/day-03-input.txt")
-
+def main(lines):
     valid_instructions = []
     for line in lines:
         # Extract lines with the following format: mul(x, y) | do() | don't()
@@ -40,7 +34,3 @@ def main():
             calculate_result(valid_instructions, condition_enabled=True)
         }"
     )
-
-
-if __name__ == "__main__":
-    main()

@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/10
-
 import networkx as nx
-
-from utils.file import read_file_lines
 
 
 def generate_trails(map):
@@ -66,9 +62,7 @@ def calculate_trail_rating(trail, trailheads, trailtails):
     return len(paths)
 
 
-def main():
-    lines = read_file_lines("2024/day-10/day-10-input.txt")
-
+def main(lines):
     # Convert into list of numbers
     nums = [[int(ch) for ch in line.strip()] for line in lines]
 
@@ -79,7 +73,3 @@ def main():
 
     rating = calculate_trail_rating(trail, trailheads, trailtails)
     print(f"Rating: {rating}")
-
-
-if __name__ == "__main__":
-    main()

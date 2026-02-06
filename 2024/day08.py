@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/8
-
 from itertools import combinations
-
-from utils.file import read_file_lines
 
 
 def count_antinode(lines, has_resonance=False):
@@ -54,15 +50,9 @@ def count_antinode(lines, has_resonance=False):
     return len(antinodes)
 
 
-def main():
-    lines = read_file_lines("2024/day-08/day-08-input.txt")
-
+def main(lines):
     antinodes = count_antinode(lines)
     antinodes_with_resonance = count_antinode(lines, has_resonance=True)
 
     print(f"Total antinodes: {antinodes}")
     print(f"Total antinodes with resonance: {antinodes_with_resonance}")
-
-
-if __name__ == "__main__":
-    main()

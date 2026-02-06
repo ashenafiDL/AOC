@@ -1,8 +1,3 @@
-# https://adventofcode.com/2024/day/2
-
-from utils.file import read_file_lines
-
-
 def is_safe(report):
     diffs = [report[i + 1] - report[i] for i in range(len(report) - 1)]
 
@@ -36,15 +31,9 @@ def count_safe_reports(data, dampener=False):
     return safe_count
 
 
-def main():
-    lines = read_file_lines("2024/day-02/day-02-input.txt")
-
+def main(lines):
     safe_count = count_safe_reports(lines)
     safe_count_with_dampener = count_safe_reports(lines, dampener=True)
 
     print(f"Safe Reports: {safe_count}")
     print(f"Safe Reports with Dampener: {safe_count_with_dampener}")
-
-
-if __name__ == "__main__":
-    main()

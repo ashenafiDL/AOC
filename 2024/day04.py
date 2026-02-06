@@ -1,8 +1,3 @@
-# https://adventofcode.com/2024/day/4
-
-from utils.file import read_file_lines
-
-
 def is_in_bounds(grid, x, y):
     return 0 <= x < len(grid) and 0 <= y < len(grid[0])
 
@@ -31,9 +26,7 @@ def search_x_mas(grid, x, y):
         return True
 
 
-def main():
-    lines = read_file_lines("2024/day-04/day-04-input.txt")
-
+def main(lines):
     grid = []
     for line in lines:
         row = [x for x in line.strip()]
@@ -55,7 +48,3 @@ def main():
                 second_count += 1 if search_x_mas(grid, row, col) else 0
 
     print(f"The word X-MAS appeared {second_count} times")
-
-
-if __name__ == "__main__":
-    main()

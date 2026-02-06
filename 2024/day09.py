@@ -1,8 +1,3 @@
-# https://adventofcode.com/2024/day/9
-
-from utils.file import read_file_lines
-
-
 def calculate_checksum(filesystem):
     checksum = 0
     for i, j in enumerate(filesystem):
@@ -113,9 +108,7 @@ def part_two(filesystem):
     return checksum
 
 
-def main():
-    lines = read_file_lines("2024/day-09/day-09-input.txt")
-
+def main(lines):
     input = lines[0].strip()  # the input for this puzzle is a single, very long line
 
     checksum_block = get_checksum(input)
@@ -123,7 +116,3 @@ def main():
 
     checksum_file = part_two(input)
     print(f"The resulting filesystem checksum  (file): {checksum_file}")
-
-
-if __name__ == "__main__":
-    main()

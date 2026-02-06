@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/7
-
 from itertools import product
-
-from utils.file import read_file_lines
 
 
 def get_total_calibration_result(lines, operators):
@@ -34,15 +30,9 @@ def get_total_calibration_result(lines, operators):
     return total_result
 
 
-def main():
-    lines = read_file_lines("2024/day-07/day-07-input.txt")
-
+def main(lines):
     without_concatenation = get_total_calibration_result(lines, ["+", "*"])
     print(f"Total calibration result: {without_concatenation}")
 
     with_concatenation = get_total_calibration_result(lines, ["+", "*", "||"])
     print(f"Total calibration result with concatenation: {with_concatenation}")
-
-
-if __name__ == "__main__":
-    main()

@@ -1,8 +1,3 @@
-# https://adventofcode.com/2024/day/12
-
-
-from utils.file import read_file_lines
-
 DIRECTIONS = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
 
@@ -78,8 +73,7 @@ def calculate_region_price(region, use_number_of_sides):
     return calculate_region_perimeter(region) * len(region)
 
 
-def main():
-    lines = read_file_lines("2024/day-12/day-12-input.txt")
+def main(lines):
     grid = [line.strip() for line in lines]
 
     regions = find_regions(grid)
@@ -92,7 +86,3 @@ def main():
             calculate_region_price(region, use_number_of_sides) for _, region in regions
         )
         print(f"The total price (by {label}): {total_price}")
-
-
-if __name__ == "__main__":
-    main()

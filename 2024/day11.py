@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/11
-
 from collections import Counter
-
-from utils.file import read_file_lines
 
 
 def transform_stone(stone: int):
@@ -29,8 +25,7 @@ def count_stones(initial: list[int], blinks: int) -> int:
     return sum(stones.values())
 
 
-def main():
-    lines = read_file_lines("2024/day-11/day-11-input.txt")
+def main(lines):
     initial_stones = list(map(int, lines[0].strip().split()))
 
     count_of_stones = count_stones(initial_stones, 25)
@@ -38,7 +33,3 @@ def main():
 
     count_of_stones = count_stones(initial_stones, 75)
     print(f"After blinking 75 times: {count_of_stones}")
-
-
-if __name__ == "__main__":
-    main()

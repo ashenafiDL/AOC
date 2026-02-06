@@ -1,8 +1,4 @@
-# https://adventofcode.com/2024/day/5
-
 import networkx as nx
-
-from utils.file import read_file_lines
 
 
 def check_if_correctly_ordered(graph, pages):
@@ -30,8 +26,7 @@ def get_middle_page(pages) -> int:
     return int(pages[middle])
 
 
-def main():
-    lines = read_file_lines("2024/day-05/day-05-input.txt")
+def main(lines):
     separator_index = lines.index("\n")
     rules = lines[:separator_index]
     updates = lines[separator_index + 1 :]
@@ -56,7 +51,3 @@ def main():
 
     print("Middle sum:", middle_sum)
     print("Middle sum for incorrect updates:", middle_sum_for_incorrect_updates)
-
-
-if __name__ == "__main__":
-    main()
