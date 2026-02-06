@@ -12,7 +12,7 @@ def part_one(lines):
         if pos % 100 == 0:
             count += 1
 
-    print(f"Part 2 password: {count}")
+    print(f"Part 1 password: {count}")
 
 
 def part_two(lines):

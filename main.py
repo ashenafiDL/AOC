@@ -1,5 +1,7 @@
+from datetime import datetime
 import sys
 from importlib import import_module
+
 
 def main():
     if len(sys.argv) != 3:
@@ -23,9 +25,15 @@ def main():
         sys.exit(1)
 
     if hasattr(module, "main"):
+        start_time = datetime.now()
         module.main(input_data)
+        end_time = datetime.now()
+
+        duration = end_time - start_time
+        print(f"\nTook {duration.total_seconds():.3f} seconds")
     else:
         print(f"Module {module_path} has no `main()` function.")
+
 
 if __name__ == "__main__":
     main()
