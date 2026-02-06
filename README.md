@@ -8,7 +8,7 @@ git clone https://github.com/ashenafidl/AOC.git
 
 2. Set up a virtual environment (optional but recommended)
 
-```base
+
 python3 -m venv .venv
 source .venv/bin/activate
 ```
@@ -24,5 +24,5 @@ pip install -r requirements.txt
 From the repository root, run:
 
 ```
-python -m main.py <year> <day>
+python main.py <year> <day>
 ```

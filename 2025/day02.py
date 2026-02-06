@@ -2,6 +2,8 @@ import math
 
 
 def count_digits(n):
+    if n <= 0:
+        raise ValueError("n must be a positive integer")
     return int(math.log10(n)) + 1
 
 
@@ -50,6 +52,10 @@ def part_two(ids):
 
 
 def main(lines):
+    if not lines or not lines[0].strip():
+        print("No input provided")
+        return
+
     id_ranges = lines[0].split(",")
 
     ids = []
